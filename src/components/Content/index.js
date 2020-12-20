@@ -5,8 +5,8 @@ import { useForm } from "react-hook-form";
 
 function Content() {
   const { register, handleSubmit } = useForm();
-  const [semPlano, setSemPlano] = useState(0.0);
-  const [comPlano, setComPlano] = useState(0.0);
+  const [semPlano, setSemPlano] = useState("0.0");
+  const [comPlano, setComPlano] = useState("0.0");
 
   function onSubmit(data) {
     console.log(data);
@@ -63,8 +63,8 @@ function Content() {
           </S.Form>
         </S.Inputs>
         <div>
-          <h1>Com FaleMais: R$ {comPlano} </h1>
-          <h1>Sem Plano: R$ {semPlano}</h1>
+          <S.Text>Com FaleMais: R$ {comPlano} </S.Text>
+          <S.Text>Sem Plano: R$ {semPlano}</S.Text>
         </div>
       </S.Wrapper>
     </>

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Typography from "@material-ui/core/Typography";
 
 export const Wrapper = styled.div``;
 
@@ -11,6 +10,8 @@ export const Image = styled.img`
   align-self: center;
 `;
 
-export const Text = styled(Typography)`
+export const Text = styled.h2`
   margin-top: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 `;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -7,6 +8,10 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   width: 80vw;
   height: 70vh;
+
+  ${media.lessThan("medium")`
+    flex-direction: column;
+  `}
 `;
 
 export const Inputs = styled.div``;
@@ -18,20 +23,27 @@ export const Form = styled.form`
   justify-content: center;
 
   select {
-    width: 300px;
-    height: 50px;
-    margin-top: 15px;
+    width: 18.75rem;
+    height: 3.125rem;
+    margin-top: 0.938rem;
+    padding-left: 0.625rem;
   }
 
   input {
-    width: 300px;
-    margin-top: 15px;
-    height: 50px;
+    width: 18.75rem;
+    margin-top: 0.938rem;
+    height: 3.125rem;
+    padding-left: 0.625rem;
   }
 
   button {
-    width: 300px;
-    height: 50px;
-    margin-top: 15px;
+    width: 18.75rem;
+    height: 3.125rem;
+    margin-top: 0.938rem;
   }
+`;
+
+export const Text = styled.h1`
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 `;

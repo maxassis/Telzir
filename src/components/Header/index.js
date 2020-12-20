@@ -8,8 +8,8 @@ function Header() {
       <S.Wrapper>
         <S.ImageWrapper>
           <S.Image src={Logo} />
-          <S.Text variant="h6" gutterBottom>
-            Calcule o valor de suas ligaçoes com o plano FaleMais da Telzir
+          <S.Text>
+            Calcule o valor de suas ligações com o plano FaleMais da Telzir
           </S.Text>
         </S.ImageWrapper>
       </S.Wrapper>
