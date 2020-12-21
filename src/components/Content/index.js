@@ -12,14 +12,18 @@ function Content() {
     console.log(data);
 
     const calcular = () => {
-      const soma = parseFloat((data.minutos - data.plano) * data.destino);
+      const tarifa = parseFloat(data.origem) + parseFloat(data.destino);
+      const minutos = parseFloat(data.minutos);
+      const plano = parseFloat(data.plano);
+
+      const soma = (minutos - plano) * tarifa;
       const porcentagem = soma * 0.1;
       const comFaleMais = porcentagem + soma;
       comFaleMais > 0
         ? setComPlano(comFaleMais.toFixed(2))
         : setComPlano("0.00");
 
-      const semFaleMais = parseFloat(data.minutos * data.destino);
+      const semFaleMais = minutos * tarifa;
       setSemPlano(semFaleMais.toFixed(2));
     };
 
@@ -31,16 +35,23 @@ function Content() {
       <S.Wrapper>
         <S.Inputs>
           <S.Form onSubmit={handleSubmit(onSubmit)}>
+            <select required ref={register({ required: true })} name="origem">
+              <option value="" disabled selected>
+                Escolha a origem
+              </option>
+              <option value="0.00">011</option>
+              <option value="1.90">016</option>
+              <option value="1.70">017</option>
+              <option value="0.90">018</option>
+            </select>
             <select required ref={register({ required: true })} name="destino">
               <option value="" disabled selected>
-                Escolha a origem e destino
+                Escolha o destino
               </option>
-              <option value="1.90">011 para 016</option>
-              <option value="2.90">016 para 011</option>
-              <option value="1.70">011 para 017</option>
-              <option value="2.70">017 para 011</option>
-              <option value="0.90">011 para 018</option>
-              <option value="1.90">018 para 011</option>
+              <option value="1.00">011</option>
+              <option value="1.90">016</option>
+              <option value="1.70">017</option>
+              <option value="0.90">018</option>
             </select>
             <select required ref={register({ required: true })} name="plano">
               <option value="" disabled selected>
