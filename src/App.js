@@ -1,14 +1,13 @@
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Content from "./components/Content";
-import Header from "./components/Header";
 import * as S from "./styles";
+import GlobalStyles from "./styles/global";
+import Content from "./components/Content";
 
 function App() {
   return (
     <>
-      <CssBaseline />
+      <GlobalStyles />
       <S.Wrapper>
-        <Header />
+        <S.ImageWrapper />
         <Content />
       </S.Wrapper>
     </>

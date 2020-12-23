@@ -1,32 +1,17 @@
 import styled from "styled-components";
-import Typography from '@material-ui/core/Typography';
+import Photo from "./assets/vir.png";
 
 export const Wrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: flex-start;
-  padding-top: 3.1rem;
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 50rem;
+  display: flex;
 `;
 
 export const ImageWrapper = styled.div`
-  width: 100vw;
-
+  width: 28.938rem;
+  height: 50rem;
+  background: url(${Photo}) 0% 0% no-repeat padding-box;
+  background-size: cover;
 `;
-
-export const Image = styled.img`
-  align-self: center;
-`;
-
-export const Text = styled(Typography)`
-  margin-top: 30px;
-`
-
-export const ContentWrapper = styled.div`
-  background-color: red;
-
-
-
-`
