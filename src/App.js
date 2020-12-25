@@ -7,7 +7,9 @@ function App() {
     <>
       <GlobalStyles />
       <S.Wrapper>
-        <S.ImageWrapper />
+        <S.ImageWrapper>
+          <h1>Telzir</h1>
+        </S.ImageWrapper>
         <Content />
       </S.Wrapper>
     </>

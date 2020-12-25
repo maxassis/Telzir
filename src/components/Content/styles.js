@@ -4,34 +4,30 @@ import media from "styled-media-query";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   width: 68%;
   margin-top: 3rem;
   opacity: 1;
-  display: flex;
-  flex-direction: column;
-  width: 68%;
-  padding-top: 3rem;
-  align-items: center;
-  justify-content: flex-end;
-
-  ${media.lessThan("medium")`
+  
+  ${media.lessThan("large")`
     margin-top: 0px;
     padding-top: 0rem;
-
   `}
 `;
 
 export const Main = styled.main`
   background: #ffffff;
+  height: 100%;
   width: 80%;
+  max-width: 720px;
   box-shadow: 0px 3px 16px #00000029;
   border-radius: 16px 16px 0px 0px;
-  height: 100%;
   padding: 2.5rem;
   box-sizing: border-box;
-  max-width: 720px;
+  
 
-  ${media.lessThan("medium")`
+  ${media.lessThan("large")`
     width: 70vw;
     box-sizing: content-box;
     margin-top: -60px;
@@ -40,13 +36,14 @@ export const Main = styled.main`
 
 export const TitleWrapper = styled.div`
   display: flex;
-  height: 6rem;
+  height: auto;
+  margin: 16px 16px 32px;
   align-items: center;
 `;
 
 export const Title = styled.h2`
   text-align: center;
-  font: normal normal normal 18px/27px Poppins;
+  font: normal normal normal 18px Poppins;
   letter-spacing: 0px;
   color: #3f51b5;
   opacity: 1;
@@ -59,7 +56,7 @@ export const SelectWrapper = styled.div`
 `;
 
 export const Label = styled.label`
-  font: normal normal bold 17px/26px Poppins;
+  font: normal normal bold 17px Poppins;
   letter-spacing: 0px;
   color: #3f51b5;
 `;
@@ -76,11 +73,13 @@ export const Select = styled.select`
   border-radius: 7px;
   opacity: 1;
   text-align: left;
-  font: normal normal bold 18px/27px Poppins;
-  letter-spacing: 0px;
+  font: normal normal bold 18px Poppins;
   color: #3f51b5;
   opacity: 1;
   outline: none;
+  margin-top: 8px;
+  padding: 10px;
+  box-sizing: border-box;
 
   :active {
     color: #f87d4f;
@@ -99,7 +98,7 @@ export const Select = styled.select`
 
   option {
     text-align: left;
-    font: normal normal bold 18px/27px Poppins;
+    font: normal normal bold 18px Poppins;
     letter-spacing: 0px;
     color: #3f51b5;
     opacity: 1;
@@ -126,11 +125,38 @@ export const RadioWrapper = styled.div`
 
   p {
     text-align: left;
-    font: normal normal bold 17px/26px Poppins;
+    font: normal normal bold 17px Poppins;
     letter-spacing: 0px;
     color: #3f51b5;
     opacity: 1;
   }
+`;
+
+export const DivRadio = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  input[type="radio"]+label { 
+    border: 1px solid #a8b6ff;
+    padding: 12px 26px;
+    font-size: 1rem;
+    font-family: 'poppins';
+    border-radius: 4px;
+    color: #3f51b5;
+    box-sizing: border-box;
+    cursor: pointer
+  }
+
+  input[type="radio"]:checked+label { 
+    border-color:#F87D4F;
+    color:#F87D4F;
+  } 
 `;
 
 export const MinutesWrapper = styled.div`
@@ -138,7 +164,7 @@ export const MinutesWrapper = styled.div`
 
   p {
     text-align: left;
-    font: normal normal bold 17px/26px Poppins;
+    font: normal normal bold 17px Poppins;
     letter-spacing: 0px;
     color: #3f51b5;
     opacity: 1;
@@ -172,7 +198,7 @@ export const Button = styled.button`
 export const Input = styled.input`
   width: 11.091rem;
   text-align: left;
-  font: normal normal bold 32px/48px Poppins;
+  font: normal normal bold 32px Poppins;
   letter-spacing: 0px;
   color: #a8b6ff;
   opacity: 1;
@@ -181,6 +207,18 @@ export const Input = styled.input`
   border-radius: 0;
   text-align: center;
   margin: 0 20px 0 20px;
+
+
+  -moz-appearance:textfield;
+
+  ::-webkit-outer-spin-button,
+::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+
+
   :focus {
     outline: none;
   }
@@ -224,7 +262,7 @@ export const PriceWrapper = styled.div`
 
 export const Text = styled.span`
   text-align: left;
-  font: normal normal bold 17px/26px Poppins;
+  font: normal normal bold 17px Poppins;
   letter-spacing: 0px;
   color: #3f51b5;
   opacity: 1;
@@ -237,14 +275,19 @@ export const DivPrecos = styled.div`
 
 export const Span1 = styled.span`
   text-align: left;
-  font: normal normal normal 12px/18px Poppins;
+  font: normal normal normal 14px Poppins;
   letter-spacing: 0px;
   color: #141414;
   opacity: 1;
+
+  span {
+    text-decoration: line-through;
+  }
+
 `;
 
 export const Span2 = styled.span`
-  font: normal normal bold 42px/63px Poppins;
+  font: normal normal bold 42px Poppins;
   letter-spacing: 0px;
   color: #3f51b5;
   opacity: 1;
@@ -254,5 +297,10 @@ export const Span3 = styled.span`
   text-align: left;
   letter-spacing: 0px;
   opacity: 1;
-  font: normal normal normal 14px/20px Poppins;
+  font: normal normal normal 16px Poppins;
+
+  span {
+    font-weight: bold;
+    text-decoration: underline;
+  }
 `;
