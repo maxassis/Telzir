@@ -130,10 +130,10 @@ function Content() {
             </S.Title>
           </S.TitleWrapper>
 
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)} autocomplete="off">
             <S.SelectWrapper>
               <S.SelectDiv>
-                <S.Label for="origin">DDD de origem</S.Label>
+                <S.Label for="origem">DDD de origem</S.Label>
                 <br />
                 <S.Select
                   required
@@ -157,7 +157,7 @@ function Content() {
                 </S.Select>
               </S.SelectDiv>
               <S.SelectDiv>
-                <S.Label for="origin">DDD de destino</S.Label>
+                <S.Label for="destino">DDD de destino</S.Label>
                 <br />
                 <S.Select
                   required
@@ -165,9 +165,9 @@ function Content() {
                   name="destino"
                   id="CidadeDestino"
                 >
-                  {DDDSelecionado.map(function (user) {
+                  {DDDSelecionado.map(function (user, i) {
                     return (
-                      <option id={user.id} value={user.value}>
+                      <option id={user.id} value={user.value} key={i}>
                         {user.title}
                       </option>
                     );

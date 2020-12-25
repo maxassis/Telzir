@@ -42,7 +42,7 @@ export const TitleWrapper = styled.div`
 
 export const Title = styled.h2`
   text-align: center;
-  font: normal normal normal 18px Poppins;
+  font: 18px Poppins;
   letter-spacing: 0px;
   color: #3f51b5;
   opacity: 1;
@@ -67,7 +67,7 @@ export const SelectDiv = styled.div`
 export const Select = styled.select`
   width: 100%;
   height: 2.938rem;
-  background: #ffffff 0% 0% no-repeat padding-box;
+  background: #ffffff padding-box;
   border: 1px solid #a8b6ff;
   border-radius: 7px;
   opacity: 1;
@@ -192,7 +192,7 @@ export const Button = styled.button`
 
 export const Input = styled.input`
   width: 11.091rem;
-  text-align: left;
+  text-align: center;
   font: normal normal bold 32px Poppins;
   letter-spacing: 0px;
   color: #a8b6ff;
@@ -224,7 +224,7 @@ export const DivButtons = styled.div`
   margin-top: 32px;
 
   button {
-    background: #ffffff 0% 0% no-repeat padding-box;
+    background: #ffffff padding-box;
     border: 1px solid #a8b6ff;
     border-radius: 5px;
     opacity: 1;
@@ -279,6 +279,10 @@ export const Span1 = styled.span`
   span {
     text-decoration: line-through;
   }
+
+  ${media.lessThan("medium")`
+    font-size: 13px;
+  `}
 `;
 
 export const Span2 = styled.span`
@@ -286,16 +290,24 @@ export const Span2 = styled.span`
   letter-spacing: 0px;
   color: #3f51b5;
   opacity: 1;
+
+  ${media.lessThan("medium")`
+    font-size: 2.3rem;
+  `}
 `;
 
 export const Span3 = styled.span`
   text-align: left;
   letter-spacing: 0px;
   opacity: 1;
-  font: normal normal normal 16px Poppins;
+  font: 16px Poppins;
 
   span {
     font-weight: bold;
     text-decoration: underline;
   }
+
+  ${media.lessThan("medium")`
+    font-size: 14px;
+  `}
 `;
