@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   width: 68%;
   margin-top: 3rem;
   opacity: 1;
-  
+
   ${media.lessThan("large")`
     margin-top: 0px;
     padding-top: 0rem;
@@ -25,7 +25,6 @@ export const Main = styled.main`
   border-radius: 16px 16px 0px 0px;
   padding: 2.5rem;
   box-sizing: border-box;
-  
 
   ${media.lessThan("large")`
     width: 70vw;
@@ -102,22 +101,12 @@ export const Select = styled.select`
     letter-spacing: 0px;
     color: #3f51b5;
     opacity: 1;
-
-    :active {
-      color: red;
-      border-color: #f87d4f;
-    }
-
-    :hover {
-      color: red;
-      border-color: #f87d4f;
-    }
-
-    :focus {
-      color: red;
-      border-color: #f87d4f;
-    }
   }
+
+  ${media.lessThan("medium")`
+    font-size: 0.9rem;
+    
+  `}
 `;
 
 export const RadioWrapper = styled.div`
@@ -142,21 +131,27 @@ export const DivRadio = styled.div`
     display: none;
   }
 
-  input[type="radio"]+label { 
+  input[type="radio"] + label {
     border: 1px solid #a8b6ff;
     padding: 12px 26px;
     font-size: 1rem;
-    font-family: 'poppins';
+    font-family: "poppins";
     border-radius: 4px;
     color: #3f51b5;
     box-sizing: border-box;
-    cursor: pointer
+    cursor: pointer;
+
+    ${media.lessThan("medium")`
+    font-size: 0.8rem;
+    width: 91px;
+    padding: 5px 20px;
+  `}
   }
 
-  input[type="radio"]:checked+label { 
-    border-color:#F87D4F;
-    color:#F87D4F;
-  } 
+  input[type="radio"]:checked + label {
+    border-color: #f87d4f;
+    color: #f87d4f;
+  }
 `;
 
 export const MinutesWrapper = styled.div`
@@ -208,16 +203,13 @@ export const Input = styled.input`
   text-align: center;
   margin: 0 20px 0 20px;
 
-
-  -moz-appearance:textfield;
+  -moz-appearance: textfield;
 
   ::-webkit-outer-spin-button,
-::-webkit-inner-spin-button {
+  ::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    margin: 0; 
-}
-
-
+    margin: 0;
+  }
 
   :focus {
     outline: none;
@@ -243,6 +235,10 @@ export const DivButtons = styled.div`
     font-family: "Poppins";
     font-size: 1rem;
     outline: none;
+
+    ${media.lessThan("medium")`
+    font-size: 0.8rem;
+  `}
   }
 `;
 
@@ -283,7 +279,6 @@ export const Span1 = styled.span`
   span {
     text-decoration: line-through;
   }
-
 `;
 
 export const Span2 = styled.span`
