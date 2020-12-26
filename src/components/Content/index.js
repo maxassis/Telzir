@@ -130,7 +130,11 @@ function Content() {
             </S.Title>
           </S.TitleWrapper>
 
-          <form onSubmit={handleSubmit(onSubmit)} autocomplete="off">
+          <form
+            data-testid="form"
+            onSubmit={handleSubmit(onSubmit)}
+            autocomplete="off"
+          >
             <S.SelectWrapper>
               <S.SelectDiv>
                 <S.Label for="origem">DDD de origem</S.Label>

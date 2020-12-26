@@ -55,7 +55,7 @@ export const SelectWrapper = styled.div`
 `;
 
 export const Label = styled.label`
-  font: normal normal bold 17px Poppins;
+  font: bold 17px Poppins;
   letter-spacing: 0px;
   color: #3f51b5;
 `;
@@ -72,7 +72,7 @@ export const Select = styled.select`
   border-radius: 7px;
   opacity: 1;
   text-align: left;
-  font: normal normal bold 18px Poppins;
+  font: bold 18px Poppins;
   color: #3f51b5;
   opacity: 1;
   outline: none;
@@ -97,7 +97,7 @@ export const Select = styled.select`
 
   option {
     text-align: left;
-    font: normal normal bold 18px Poppins;
+    font: bold 18px Poppins;
     letter-spacing: 0px;
     color: #3f51b5;
     opacity: 1;
@@ -114,7 +114,7 @@ export const RadioWrapper = styled.div`
 
   p {
     text-align: left;
-    font: normal normal bold 17px Poppins;
+    font: bold 17px Poppins;
     letter-spacing: 0px;
     color: #3f51b5;
     opacity: 1;
@@ -193,7 +193,7 @@ export const Button = styled.button`
 export const Input = styled.input`
   width: 11.091rem;
   text-align: center;
-  font: normal normal bold 32px Poppins;
+  font: bold 32px Poppins;
   letter-spacing: 0px;
   color: #a8b6ff;
   opacity: 1;
@@ -258,7 +258,7 @@ export const PriceWrapper = styled.div`
 
 export const Text = styled.span`
   text-align: left;
-  font: normal normal bold 17px Poppins;
+  font: bold 17px Poppins;
   letter-spacing: 0px;
   color: #3f51b5;
   opacity: 1;
@@ -271,7 +271,7 @@ export const DivPrecos = styled.div`
 
 export const Span1 = styled.span`
   text-align: left;
-  font: normal normal normal 14px Poppins;
+  font: 14px Poppins;
   letter-spacing: 0px;
   color: #141414;
   opacity: 1;
@@ -286,7 +286,7 @@ export const Span1 = styled.span`
 `;
 
 export const Span2 = styled.span`
-  font: normal normal bold 42px Poppins;
+  font: bold 42px Poppins;
   letter-spacing: 0px;
   color: #3f51b5;
   opacity: 1;

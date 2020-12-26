@@ -6,7 +6,7 @@ import Content from "./index";
 
 describe("<Button />", () => {
   it("checking the minute button styles", () => {
-    const { container } = render(<Content />);
+    const {} = render(<Content />);
 
     expect(screen.getByRole("button", { name: /5 min/i })).toHaveStyle({
       background: "ffffff padding-box",
@@ -23,7 +23,7 @@ describe("<Button />", () => {
     expect(screen.getByPlaceholderText("0min")).toHaveStyle({
       width: "11.091rem",
       "text-align": "center",
-      font: "normal normal bold 32px Poppins",
+      font: "bold 32px Poppins",
     });
   });
 
@@ -37,5 +37,14 @@ describe("<Button />", () => {
       color: "#3f51b5",
       opacity: 1,
     });
+  });
+
+  it("check if the submit button is calling the function", () => {
+    const {} = render(<Content />);
+
+    const form = screen.getByTestId("form");
+    fireEvent.submit(form);
+
+    expect(screen.getByTestId("form")).toBeTruthy();
   });
 });
