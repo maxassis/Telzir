@@ -50,7 +50,7 @@ em seguida acesse a pasta do projeto e faça a instalação:
 
 
 
-dentro da pasta do projeto roda o seguinte comando para roda a aplicação
+dentro da pasta do projeto execute o comando para rodar a aplicação
 
 `npm start`
 
@@ -58,7 +58,7 @@ dentro da pasta do projeto roda o seguinte comando para roda a aplicação
 
 ##  Testes
 
-para executar os testes rode o comando:
+para executar os testes execute o comando:
 
 `npm run test`
 
