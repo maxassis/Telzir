@@ -62,7 +62,7 @@ para executar os testes rode o comando:
 
 `npm run test`
 
-
+e apos abra http://localhost:3000 no navegador
 
 
 
