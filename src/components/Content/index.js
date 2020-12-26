@@ -222,6 +222,7 @@ function Content() {
                   required
                   name="minutos"
                   type="number"
+                  inputMode="numeric"
                   ref={register()}
                 ></S.Input>
                 <S.Button onClick={mais1}>+</S.Button>

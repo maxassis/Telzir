@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   width: 100%;
   min-height: 100vh;
   display: flex;
+  overflow-x: hidden;
 
   ${media.lessThan("large")`
     flex-direction: column;
@@ -22,17 +23,23 @@ export const ImageWrapper = styled.div`
   background-position-x: 75%;
   display: flex;
   justify-content: center;
-  align-items: center;  
-  h1{
+  align-items: center;
+  h1 {
     font-size: 72px;
-    font-family: 'poppins';
+    font-family: "poppins";
     font-weight: 800;
     color: #fff;
-  }  
+
+    ${media.lessThan("small")`
+    font-size: 45px;
+
+  `}
+  }
 
   ${media.lessThan("large")`
     width: 100vw;
-    height: 55vh;
+    height: 35vh;
+
 
   `}
 `;

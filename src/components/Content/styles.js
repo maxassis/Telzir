@@ -31,6 +31,11 @@ export const Main = styled.main`
     box-sizing: content-box;
     margin-top: -60px;
   `}
+
+  ${media.lessThan("medium")`
+    padding: 1rem;
+    width: 85vw;
+  `}
 `;
 
 export const TitleWrapper = styled.div`
@@ -46,12 +51,22 @@ export const Title = styled.h2`
   letter-spacing: 0px;
   color: #3f51b5;
   opacity: 1;
+
+  ${media.lessThan("small")`
+    font-size: 15px;
+
+  `}
 `;
 
 export const SelectWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 29px;
+
+  ${media.lessThan("medium")`
+    display: flex;
+    flex-direction: column;
+  `}
 `;
 
 export const Label = styled.label`
@@ -142,9 +157,13 @@ export const DivRadio = styled.div`
     cursor: pointer;
 
     ${media.lessThan("medium")`
-    font-size: 0.8rem;
-    width: 91px;
-    padding: 5px 20px;
+    margin: 0 4px;
+  `}
+
+    ${media.lessThan("small")`
+    width:30%;
+    font-size: 0.9rem;
+    padding: 8px 12px;
   `}
   }
 
@@ -152,6 +171,10 @@ export const DivRadio = styled.div`
     border-color: #f87d4f;
     color: #f87d4f;
   }
+
+  ${media.lessThan("medium")`
+    font-size: 0.8rem;
+  `}
 `;
 
 export const MinutesWrapper = styled.div`
@@ -262,6 +285,10 @@ export const Text = styled.span`
   letter-spacing: 0px;
   color: #3f51b5;
   opacity: 1;
+
+  ${media.lessThan("small")`
+    font-size: 13px;
+  `}
 `;
 
 export const DivPrecos = styled.div`
@@ -283,6 +310,11 @@ export const Span1 = styled.span`
   ${media.lessThan("medium")`
     font-size: 13px;
   `}
+
+  ${media.lessThan("small")`
+    font-size: 10px;
+    text-align: center;
+  `}
 `;
 
 export const Span2 = styled.span`
@@ -293,6 +325,11 @@ export const Span2 = styled.span`
 
   ${media.lessThan("medium")`
     font-size: 2.3rem;
+  `}
+
+  ${media.lessThan("small")`
+    font-size: 1.8rem;
+    text-align: center;
   `}
 `;
 
@@ -309,5 +346,10 @@ export const Span3 = styled.span`
 
   ${media.lessThan("medium")`
     font-size: 14px;
+  `}
+
+  ${media.lessThan("small")`
+    font-size: 12px;
+    text-align: center;
   `}
 `;
