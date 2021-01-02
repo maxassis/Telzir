@@ -40,7 +40,7 @@ Styled Components
 
 Clone o projeto utilizando o comando: 
 
-`https://github.com/maxassis/desafio-vizir.git`
+`https://github.com/maxassis/Telzir.git`
 
 
 
